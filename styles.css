@@ -1,0 +1,36 @@
+/* styles.css */
+
+body {
+  background-color: rgb(40, 100, 179);
+  font-family: sans-serif;
+}
+
+div {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  border: 10px solid rgb(7, 54, 82);
+  text-align: left;
+  color: #000000;
+}
+
+.box1 {
+  background-color: #4ec0ec;
+}
+
+.box2 {
+  background-color: #9e9b9b;
+}
+
+.container > div {
+  border-radius: 10px;
+  padding: 5px;
+  background-color: rgb(125, 167, 103);
+  border: 2px solid rgb(7, 54, 82);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}
