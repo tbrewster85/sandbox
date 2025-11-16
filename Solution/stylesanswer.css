@@ -1,0 +1,172 @@
+/* --- GLOBAL STYLES --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #1f2937;
+}
+
+.container {
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* --- HEADER --- */
+header {
+  background: #1f2937;
+  padding: 20px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f9faf8;
+}
+
+nav a {
+  margin-left: 20px;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  background: #1f2937;
+  padding: 80px 0;
+  color: #f9faf8;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero-text p {
+  margin: 15px 0;
+  color: #e5e7eb;
+  max-width: 400px;
+}
+
+.btn-primary {
+  background: #3882f6;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.hero-image {
+  background: #6b7280;
+  height: 220px;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+}
+
+/* --- INFO SECTION --- */
+.info {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.info-grid {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  width: 150px;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  border: 3px solid #3882f6;
+  border-radius: 15px;
+}
+
+.info-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* --- QUOTE SECTION --- */
+.quote {
+  background: #e5e7eb;
+  padding: 80px 0;
+}
+
+.quote-text {
+  font-size: 24px;
+  font-style: italic;
+  color: #1f2937;
+  line-height: 1.4;
+}
+
+.quote-author {
+  text-align: right;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* --- CTA SECTION --- */
+.cta {
+  padding: 70px 0;
+}
+
+.cta-container {
+  background: #3882f6;
+  color: white;
+  padding: 40px 60px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-outline {
+  border: 2px solid white;
+  background: transparent;
+  padding: 10px 30px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* --- FOOTER --- */
+footer {
+  background: #1f2937;
+  text-align: center;
+  padding: 30px;
+  color: #e5e7eb;
+  margin-top: 40px;
+}
