@@ -28,8 +28,10 @@ console.log(a);
 a=25;
 console.log(a);
 
+
 let b = 7 * a;
 console.log(b);
+
 
 
 const max = 57;
@@ -66,6 +68,19 @@ console.log(counter);
 
 typeof age
 console.log(typeof age);
+
+console.log(23+97)
+console.log(1+2+3+4+5)
+console.log((4+6+9) / 77)
+
+let z = 10
+console.log(z)
+z=34
+console.log(z)
+
+let x = 7 * z
+console.log(x)
+
 
 const btn = document.querySelector("button");
 const txt = document.querySelector("p");
