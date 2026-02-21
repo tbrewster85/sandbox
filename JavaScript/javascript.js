@@ -159,10 +159,6 @@ const greetings3 = "Howdy";
 const name3 = "Ramesh";
 console.log(`${greetings3}, ${name3}`);
 
-const single = 'Single quotes';
-const double = "Double quotes";
-const backtick = `Backtick`;
-
 const song = "Fight the Youth";
 const score = 9;
 const highScore = 10;
@@ -185,12 +181,22 @@ console.log(goodQuotes1);
 console.log(goodQuotes2);
 console.log(bigmouth);
 
+const single = 'Single quotes';
+const double = "Double quotes";
+const backtick = `Backtick`;
+
 console.log(single);
 console.log(double);
 console.log(backtick);
 
 let message2 = "hello ";
 console.log(message2)
+
+let name99 = "Todd";
+console.log(`Hello, ${name99}!\nHave a great day!`)
+
+let isGreater = 4>5;
+console.log(isGreater);
 
 let hello = "Hello, World";
 let message3 = hello;
@@ -220,7 +226,10 @@ function favoriteBand(band) {
 
 console.log(favoriteBand('Immortal'))
 
-
+let hour = 9
+if (hour < 10 || hour >18) {
+  console.log("The office is closed.");
+}
 
 const btn = document.querySelector("button");
 const txt = document.querySelector("p");
@@ -242,5 +251,3 @@ function updateBtn() {
 }
 
 let machinePower = true;
-
-
