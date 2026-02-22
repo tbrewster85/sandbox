@@ -226,28 +226,37 @@ function favoriteBand(band) {
 
 console.log(favoriteBand('Immortal'))
 
+
+// LOGICAL OPERATORS
+
 let hour = 9
 if (hour < 10 || hour >18) {
   console.log("The office is closed.");
 }
 
-const btn = document.querySelector("button");
-const txt = document.querySelector("p");
+
+
+const btn = document.querySelector("button");  // querySelector is a function on the document.  In this case = HTML doc.
+const txt = document.querySelector("p");  // document is a variable defined by the browser automatically when running JS in the browser.
 console.log(btn);
+
+// the above button and p are just element types.
 
 btn.addEventListener("click", updateBtn);
 
+let machinePower = true;
+
 function updateBtn() {
-    machinePower = !machinePower;
+    machinePower = !machinePower;  // whatever it is currently, make it the opposite.
     console.log(machinePower);
-  if (machinePower) {  
+  if (machinePower) {    // if is always looking for truth.
     btn.textContent = "Stop machine";
     txt.textContent = "The machine has started!";
-    
-  } else {
+     
+  } else {  // else is the result if it's false.
     btn.textContent = "Start machine";
     txt.textContent = "The machine is stopped.";
   }
 }
 
-let machinePower = true;
+

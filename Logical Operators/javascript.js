@@ -16,20 +16,21 @@ console.log( undefined || null || 0 ); // 0 (all falsy, returns the last value)
 
 console.log( null || 2 || undefined );
 
-let firstName = "";
-let lastName = "";
+let firstName = "";  // technically defined, but has a blank string, so evaluates as falsey.
+let lastName = "";   // technically defined, but has a blank string, so evaluates as falsey.
 let nickName = "SuperCoder";
 
 console.log( firstName || lastName || nickName || "Anonymous"); // SuperCoder
 
 // SHORT-CIRCUIT EVALUATION  *QUESTION FOR RYAN
 
-true || console.log("not printed");
+true || console.log("not printed");  // because the first part is true "true", it doesnt need to run console.log
 false || console.log("printed");
 
 // IF
 
 let hour = 9
+
 if (hour < 10 || hour >18) {
   console.log("The office is closed.");
 }
@@ -48,7 +49,7 @@ if (hour2 <10 || hour >18 || isWeekend) {
 let hour3 = 12;
 let minute3 = 30;
 
-if (hour3 == 12 && minute3 == 30) {
+if (hour3 == 12 && minute3 == 30) {  //   == is a comparison in this case /  true or false
   console.log("The time is 12:30");  
 }
 
@@ -57,7 +58,7 @@ let hour4 = 12;
 let minute4 = 30;
 
 if (hour4 == 12 && minute4 == 30) {
-  console.log("The time is ${hour4} ${minute4}");  // WHY DOESNT THIS WORK? Need to embed.
+  console.log(`The time is ${hour4} ${minute4}`);  
 }
 
 if (1 && 0) { // evaluated as true && false
@@ -72,11 +73,11 @@ console.log( null && 5 ); // null  //if the first operand is falsy, AND returns 
 console.log( 0 && "no matter what" ); // 0
 
 let x = 1;
-(x > 0) && console.log( 'Greater than zero!' );  // DONT DO THIS!  QUESTION FOR RYAN? HOW IS $$ REPLACING IF?  
+(x > 0) && console.log( 'Greater than zero!' );  // OPTION 1  
 
 let x2 = 1;
 if (x2 > 0) {
-  console.log('Greater than zero!')   //  DO THIS INSTEAD!
+  console.log('Greater than zero!')   //  OPTION 2, does the same thing.  Recommended
 }
 
 
@@ -85,7 +86,7 @@ if (x2 > 0) {
 console.log( !true ); // false
 console.log( !0 ); // true
 
-console.log( !!"non-empty string" ); // true
+console.log( !!"non-empty string" ); // true   helps to read backwards
 console.log( !!null ); // false
 
 console.log( Boolean("non-empty string") ); // true
@@ -102,7 +103,7 @@ console.log( null || 2 && 3 || 4 );  // 3
 
 // Which of these gets executed?
 
-if (-1 || 0) console.log( 'first' );
+if (-1 || 0) console.log( 'first' );  // negative is still a truthy value.
 if (-1 && 0) console.log( 'second' );
 if (null || -1 && 1) console.log( 'third' );
 
@@ -114,7 +115,7 @@ if (age >= 14 && age <= 90) {
 }
 
 let age2 = 2
-if (!(age2 >= 14 && age2 <= 90))
+if (!(age2 >= 14 && age2 <= 90))  //  all the ! does is invert the ()
   console.log("True!")
 
 
@@ -122,17 +123,17 @@ if (!(age2 >= 14 && age2 <= 90))
 
 let userName = prompt("Who's there?", '');
 
-if (userName === 'Admin') {
+if (userName === 'Admin') { //  === is a strict comparison.  This has to be an exact match.  
 
-  let pass = prompt('Password?', '');
+    let pass = prompt('Password?', '');
 
-  if (pass === 'TheMaster') {
-    alert( 'Welcome!' );
-  } else if (pass === '' || pass === null) {
-    alert( 'Canceled' );
-  } else {
-    alert( 'Wrong password' );
-  }
+    if (pass === 'TheMaster') {
+      alert( 'Welcome!' );
+    } else if (pass === '' || pass === null) {
+      alert( 'Canceled' );
+    } else {
+      alert( 'Wrong password' );
+    }
 
 } else if (userName === '' || userName === null) {
   alert( 'Canceled' );
