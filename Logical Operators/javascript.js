@@ -1,0 +1,207 @@
+console.log("Hello, World!");
+
+//     || (OR)
+
+console.log( true || true );   // true
+console.log( false || true );  // true
+console.log( true || false );  // true
+console.log( false || false ); // false
+
+// TRUTHY VALUES FROM LIST OF VARIABLES. LOG WILL SHOW FIRST TRUE VALUE.  *QUESTION FOR RYAN*
+
+console.log( 1 || 0 ); // 1 (1 is truthy)
+console.log( null || 1 ); // 1 (1 is the first truthy value)
+console.log( null || 0 || 1 ); // 1 (the first truthy value)
+console.log( undefined || null || 0 ); // 0 (all falsy, returns the last value)
+
+console.log( null || 2 || undefined );
+
+let firstName = "";  // technically defined, but has a blank string, so evaluates as falsey.
+let lastName = "";   // technically defined, but has a blank string, so evaluates as falsey.
+let nickName = "SuperCoder";
+
+console.log( firstName || lastName || nickName || "Anonymous"); // SuperCoder
+
+// SHORT-CIRCUIT EVALUATION  *QUESTION FOR RYAN
+
+true || console.log("not printed");  // because the first part is true "true", it doesnt need to run console.log
+false || console.log("printed");
+
+// IF
+
+let hour = 9
+
+if (hour < 10 || hour >18) {
+  console.log("The office is closed.");
+}
+
+let hour2 = 12
+let isWeekend = true;
+
+if (hour2 <10 || hour >18 || isWeekend) {
+  console.log("The office is closed.");
+}
+
+
+//      && (AND)
+
+
+let hour3 = 12;
+let minute3 = 30;
+
+if (hour3 == 12 && minute3 == 30) {  //   == is a comparison in this case /  true or false
+  console.log("The time is 12:30");  
+}
+
+
+let hour4 = 12;
+let minute4 = 30;
+
+if (hour4 == 12 && minute4 == 30) {
+  console.log(`The time is ${hour4} ${minute4}`);  
+}
+
+if (1 && 0) { // evaluated as true && false
+  alert( "won't work, because the result is falsy" );
+}
+
+
+console.log( 1 && 0 ); // 0    // if the first operand is truthy, AND returns the second operand:
+console.log( 1 && 5 ); // 5 
+
+console.log( null && 5 ); // null  //if the first operand is falsy, AND returns it. The second operand is ignored
+console.log( 0 && "no matter what" ); // 0
+
+let x = 1;
+(x > 0) && console.log( 'Greater than zero!' );  // OPTION 1  
+
+let x2 = 1;
+if (x2 > 0) {
+  console.log('Greater than zero!')   //  OPTION 2, does the same thing.  Recommended
+}
+
+//     ! (NOT)
+
+console.log( !true ); // false
+console.log( !0 ); // true
+
+console.log( !!"non-empty string" ); // true   helps to read backwards
+console.log( !!null ); // false
+
+console.log( Boolean("non-empty string") ); // true
+console.log( Boolean(null) ); // false
+
+// Which of these gets executed?
+
+if (-1 || 0) console.log( 'first' );  // negative is still a truthy value.
+if (-1 && 0) console.log( 'second' );
+if (null || -1 && 1) console.log( 'third' );
+
+
+
+let iceCreamVanOutside = true
+
+if (!(iceCreamVanOutside || houseStatus === "on fire")) {
+  console.log("Probably should just stay in then.");
+} else {
+  console.log("You should leave the house quickly.");
+}
+
+
+// AGE RANGE TEST
+
+let age = 27
+if (age >= 14 && age <= 90) {
+  console.log("True!")
+}
+
+let age2 = 2
+if (!(age2 >= 14 && age2 <= 90))  //  all the ! does is invert the ()
+  console.log("True!")
+
+
+// PROMPT
+
+let userName = prompt("Who's there?", '');
+
+if (userName === 'Admin') { //  === is a strict comparison.  This has to be an exact match.  
+
+    let pass = prompt('Password?', '');
+
+    if (pass === 'TheMaster') {
+      alert( 'Welcome!' );
+    } else if (pass === '' || pass === null) {
+      alert( 'Canceled' );
+    } else {
+      alert( 'Wrong password' );
+    }
+
+} else if (userName === '' || userName === null) {
+  alert( 'Canceled' );
+} else {
+  alert( "I don't know you" );
+}
+
+
+// EXAMPLE
+
+
+let shoppingDone = false;
+let childAllowance;
+
+if (shoppingDone === true) {
+    childAllowance = 10;
+} else {
+    childAllowance = 5;
+}
+
+console.log(childAllowance);
+
+
+
+// EXAMPLE
+
+
+
+
+
+
+// WEATHER APP
+
+const select = document.querySelector("select");
+const para = document.querySelector("p");
+
+select.addEventListener("change", setWeather);
+
+function setWeather() {
+  const choice = select.value;  // Ask Ryan about this.
+
+  if (choice === "sunny") {
+    para.textContent =
+      "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+  } else if (choice === "rainy") {
+    para.textContent =
+      "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
+  } else if (choice === "snowing") {
+    para.textContent =
+      "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+  } else if (choice === "overcast") {
+    para.textContent =
+      "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
+  } else {
+    para.textContent = "";
+  }
+}
+
+
+let scoops = 7
+
+if (scoops == 5) {
+  console.log("Eat faster!");
+} else if (scoops == 3) {
+  console.log("Ice cream is running low!")
+} else {
+  console.log("Still lots of ice cream!")
+}
+
+
