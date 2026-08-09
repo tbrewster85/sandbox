@@ -308,4 +308,10 @@ if (cheese) {
 }
 
 
+let genre = prompt("What is Todd's favorite genre of music?")
 
+if (genre === "Metal" || genre === "metal")   {
+  alert( 'Exactly' );
+} else {
+  alert( 'What?!' );
+}
